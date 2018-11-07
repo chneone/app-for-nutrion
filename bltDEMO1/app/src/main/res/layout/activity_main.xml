@@ -1,0 +1,247 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/title"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="当前没有连接任何设备" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+
+
+        <!--<Button-->
+            <!--android:id="@+id/button2"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:onClick="send_click"-->
+            <!--android:text="历史记录" />-->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:text="接收到的数据" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_height="wrap_content">
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_height="237dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/View_z"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="1"
+                android:text="种类:"
+                android:textSize="25dp" />
+
+            <EditText
+                android:id="@+id/edit_z"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/View_g"
+                android:layout_width="12dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:text="重量:"
+                android:textSize="25dp" />
+            <EditText
+                android:id="@+id/edit_g"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+            <!--<EditText-->
+                <!--android:id="@+id/edit_g"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="1dp"-->
+                <!--android:layout_weight="1" />-->
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_jiao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="10dp"
+                android:background="#38aec3"
+                android:onClick="exchange_click"
+                android:text="校准"
+                android:textColor="#ffff"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/button_qupi"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:background="#38aec3"
+                android:textColor="#ffff"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:onClick="qupi_click"
+                android:text="去皮"
+                android:textSize="18dp" />
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:onClick="send_click"
+                android:background="#38aec3"
+                android:textColor="#ffff"
+                android:text="记录"
+                android:textSize="18dp" />
+            <!--<Button-->
+                <!--android:id="@+id/button2"-->
+                <!--android:layout_width="20dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:onClick="send_click"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:layout_marginLeft="15dp"-->
+                <!--android:layout_marginRight="3dp"-->
+                <!--android:text="记录" />-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/button_logon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:onClick="logon_click"
+                android:layout_marginLeft="2dp"
+                android:text="注册"
+                android:background="#38aec3"
+                android:textColor="#ffff"
+                android:textSize="18dp" />
+            <Button
+                android:id="@+id/button_contrast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:onClick="contrast_click"
+                android:layout_marginLeft="15dp"
+                android:text="对比"
+                android:background="#38aec3"
+                android:textColor="#ffff"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/button_set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:onClick="set_click"
+                android:text="设置"
+                android:background="#38aec3"
+                android:textColor="#ffff"
+                android:textSize="18dp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+
+        android:layout_marginBottom="10dp">
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:onClick="connect_click"
+            android:background="#38aec3"
+            android:textColor="#ffff"
+            android:text="连接" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:onClick="quit_click"
+            android:background="#38aec3"
+            android:textColor="#ffff"
+            android:text="断开连接" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="search_click"
+            android:layout_marginLeft="15dp"
+            android:background="#38aec3"
+            android:textColor="#ffff"
+            android:text="搜索" />
+
+    </LinearLayout>
+
+</LinearLayout>

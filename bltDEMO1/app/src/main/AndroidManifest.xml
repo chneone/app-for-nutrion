@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.ui.bltdemo">
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="20" />
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    -keep class com.iflytek.**{*;}
+    <application
+        android:name=".dataapter"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="blutooth"
+        android:supportsRtl="true"
+        android:launchMode="singleInstance"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="cn.ui.bltdemo.address">
+        </activity>
+        <activity android:name="cn.ui.bltdemo.savedata">
+        </activity>
+        <activity android:name="cn.ui.bltdemo.Compare">
+        </activity>
+        <activity android:name="cn.ui.bltdemo.Msglogin">
+        </activity>
+        <activity android:name="cn.ui.bltdemo.Msgset">
+        </activity>
+
+        <!-- 广播接收 -->
+        <receiver android:name="cn.ui.bltdemo.BluetoothReceiver" >
+            <intent-filter android:priority="1000">
+                <action android:name="android.bluetooth.device.action.PAIRING_REQUEST"/>
+                <action android:name="android.bluetooth.device.action.FOUND" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
